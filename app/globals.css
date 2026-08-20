@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-/* ========================================
+/* =========================================================
    NEXORA — GLOBAL DESIGN SYSTEM
-   ======================================== */
+   ========================================================= */
 
 :root {
   --background: #08090d;
@@ -23,9 +23,9 @@
   --cyan: #22d3ee;
 }
 
-/* ========================================
+/* =========================================================
    BASE
-   ======================================== */
+   ========================================================= */
 
 * {
   box-sizing: border-box;
@@ -40,20 +40,35 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
-/* ========================================
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  font: inherit;
+}
+
+/* =========================================================
    TEXT SELECTION
-   ======================================== */
+   ========================================================= */
 
 ::selection {
   background: rgba(139, 92, 246, 0.35);
   color: #ffffff;
 }
 
-/* ========================================
+/* =========================================================
    SCROLLBAR
-   ======================================== */
+   ========================================================= */
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -72,13 +87,9 @@ body {
   background: rgba(255, 255, 255, 0.25);
 }
 
-/* ========================================
-   NEXORA CUSTOM ANIMATIONS
-   ======================================== */
-
-/* ----------------------------------------
+/* =========================================================
    1. FLOATING ELEMENT
-   ---------------------------------------- */
+   ========================================================= */
 
 @keyframes nexora-float {
   0%,
@@ -91,9 +102,9 @@ body {
   }
 }
 
-/* ----------------------------------------
-   2. CINEMATIC FADE + SLIDE + BLUR
-   ---------------------------------------- */
+/* =========================================================
+   2. CINEMATIC FADE UP
+   ========================================================= */
 
 @keyframes nexora-fade-up {
   0% {
@@ -114,9 +125,9 @@ body {
   }
 }
 
-/* ----------------------------------------
+/* =========================================================
    3. SOFT GLOW
-   ---------------------------------------- */
+   ========================================================= */
 
 @keyframes nexora-glow {
   0%,
@@ -131,9 +142,9 @@ body {
   }
 }
 
-/* ----------------------------------------
-   4. ROTATING AI RING
-   ---------------------------------------- */
+/* =========================================================
+   4. BASIC ROTATION
+   ========================================================= */
 
 @keyframes nexora-spin {
   from {
@@ -145,9 +156,9 @@ body {
   }
 }
 
-/* ----------------------------------------
+/* =========================================================
    5. PULSE
-   ---------------------------------------- */
+   ========================================================= */
 
 @keyframes nexora-pulse {
   0%,
@@ -162,9 +173,9 @@ body {
   }
 }
 
-/* ----------------------------------------
+/* =========================================================
    6. SHIMMER
-   ---------------------------------------- */
+   ========================================================= */
 
 @keyframes nexora-shimmer {
   0% {
@@ -176,9 +187,9 @@ body {
   }
 }
 
-/* ----------------------------------------
+/* =========================================================
    7. SCALE IN
-   ---------------------------------------- */
+   ========================================================= */
 
 @keyframes nexora-scale-in {
   0% {
@@ -192,13 +203,9 @@ body {
   }
 }
 
-/* ========================================
-   NEW WORKSPACE ANIMATIONS
-   ======================================== */
-
-/* ----------------------------------------
+/* =========================================================
    8. DASHBOARD REVEAL
-   ---------------------------------------- */
+   ========================================================= */
 
 @keyframes nexora-dashboard-reveal {
   0% {
@@ -219,9 +226,9 @@ body {
   }
 }
 
-/* ----------------------------------------
+/* =========================================================
    9. CARD REVEAL
-   ---------------------------------------- */
+   ========================================================= */
 
 @keyframes nexora-card-reveal {
   0% {
@@ -235,9 +242,9 @@ body {
   }
 }
 
-/* ----------------------------------------
+/* =========================================================
    10. CHART BAR GROW
-   ---------------------------------------- */
+   ========================================================= */
 
 @keyframes nexora-chart-grow {
   from {
@@ -251,9 +258,9 @@ body {
   }
 }
 
-/* ----------------------------------------
-   11. PROGRESS REVEAL
-   ---------------------------------------- */
+/* =========================================================
+   11. PROGRESS
+   ========================================================= */
 
 @keyframes nexora-progress {
   from {
@@ -265,9 +272,9 @@ body {
   }
 }
 
-/* ----------------------------------------
-   12. GENTLE BORDER GLOW
-   ---------------------------------------- */
+/* =========================================================
+   12. BORDER GLOW
+   ========================================================= */
 
 @keyframes nexora-border-glow {
   0%,
@@ -284,9 +291,9 @@ body {
   }
 }
 
-/* ----------------------------------------
-   13. AI SCAN LINE
-   ---------------------------------------- */
+/* =========================================================
+   13. AI SCAN
+   ========================================================= */
 
 @keyframes nexora-scan {
   0% {
@@ -308,11 +315,123 @@ body {
   }
 }
 
-/* ========================================
-   CUSTOM ANIMATION UTILITIES
-   ======================================== */
+/* =========================================================
+   14. ORBIT ROTATION
+   ========================================================= */
 
-/* Main Hero entrance animation */
+@keyframes nexora-orbit-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes nexora-orbit-rotate-reverse {
+  from {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+/* =========================================================
+   15. ORBIT NODE ROTATION
+   ========================================================= */
+
+@keyframes nexora-node-counter {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+/* =========================================================
+   16. ENERGY RING ROTATION
+   ========================================================= */
+
+@keyframes nexora-energy-spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes nexora-energy-spin-reverse {
+  from {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+/* =========================================================
+   17. ORBIT PULSE
+   ========================================================= */
+
+@keyframes nexora-orbit-pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    box-shadow:
+      0 0 0 0 rgba(139, 92, 246, 0.1),
+      0 0 12px rgba(139, 92, 246, 0.25);
+  }
+
+  50% {
+    opacity: 1;
+    box-shadow:
+      0 0 0 7px rgba(139, 92, 246, 0),
+      0 0 25px rgba(139, 92, 246, 0.65);
+  }
+}
+
+/* =========================================================
+   18. CORE BREATHING
+   ========================================================= */
+
+@keyframes nexora-core-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.65;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   19. ROTATING DASH
+   ========================================================= */
+
+@keyframes nexora-dash-spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* =========================================================
+   CUSTOM UTILITIES
+   ========================================================= */
 
 .animate-nexora-fade-up {
   animation:
@@ -322,8 +441,6 @@ body {
     both;
 }
 
-/* Floating elements */
-
 .animate-nexora-float {
   animation:
     nexora-float
@@ -331,8 +448,6 @@ body {
     ease-in-out
     infinite;
 }
-
-/* Ambient background glow */
 
 .animate-nexora-glow {
   animation:
@@ -342,8 +457,6 @@ body {
     infinite;
 }
 
-/* Rotating elements */
-
 .animate-nexora-spin {
   animation:
     nexora-spin
@@ -351,8 +464,6 @@ body {
     linear
     infinite;
 }
-
-/* Status indicators */
 
 .animate-nexora-pulse {
   animation:
@@ -362,8 +473,6 @@ body {
     infinite;
 }
 
-/* Premium shimmer */
-
 .animate-nexora-shimmer {
   animation:
     nexora-shimmer
@@ -371,8 +480,6 @@ body {
     ease-in-out
     infinite;
 }
-
-/* Scale entrance */
 
 .animate-nexora-scale-in {
   animation:
@@ -382,9 +489,9 @@ body {
     both;
 }
 
-/* ========================================
+/* =========================================================
    WORKSPACE UTILITIES
-   ======================================== */
+   ========================================================= */
 
 .animate-nexora-dashboard {
   animation:
@@ -435,9 +542,258 @@ body {
     infinite;
 }
 
-/* ========================================
+/* =========================================================
+   ADVANCED ORBIT SYSTEM
+   ========================================================= */
+
+/* Base orbit */
+
+.nexora-orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  width: 100%;
+  height: 48%;
+
+  border: 1px solid rgba(139, 92, 246, 0.12);
+  border-radius: 50%;
+
+  transform-origin: center;
+
+  pointer-events: none;
+}
+
+/* Orbit 1 */
+
+.nexora-orbit-1 {
+  animation:
+    nexora-orbit-rotate
+    18s
+    linear
+    infinite;
+
+  box-shadow:
+    0 0 40px rgba(139, 92, 246, 0.025),
+    inset 0 0 40px rgba(139, 92, 246, 0.015);
+}
+
+/* Orbit 2 */
+
+.nexora-orbit-2 {
+  width: 78%;
+  height: 65%;
+
+  border-color: rgba(34, 211, 238, 0.1);
+
+  animation:
+    nexora-orbit-rotate-reverse
+    24s
+    linear
+    infinite;
+}
+
+/* Orbit 3 */
+
+.nexora-orbit-3 {
+  width: 55%;
+  height: 82%;
+
+  border-color: rgba(255, 255, 255, 0.07);
+
+  animation:
+    nexora-orbit-rotate
+    30s
+    linear
+    infinite;
+}
+
+/* =========================================================
+   ORBIT DOTS
+   ========================================================= */
+
+.nexora-orbit-dot {
+  position: absolute;
+
+  left: 50%;
+  top: -4px;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 999px;
+
+  transform: translateX(-50%);
+
+  animation:
+    nexora-orbit-pulse
+    2s
+    ease-in-out
+    infinite;
+}
+
+.nexora-orbit-dot-violet {
+  background: #a78bfa;
+
+  box-shadow:
+    0 0 12px rgba(167, 139, 250, 0.8),
+    0 0 30px rgba(139, 92, 246, 0.4);
+}
+
+.nexora-orbit-dot-cyan {
+  background: #67e8f9;
+
+  box-shadow:
+    0 0 12px rgba(34, 211, 238, 0.8),
+    0 0 30px rgba(34, 211, 238, 0.4);
+
+  animation-delay: 0.7s;
+}
+
+.nexora-orbit-dot-white {
+  background: #ffffff;
+
+  box-shadow:
+    0 0 12px rgba(255, 255, 255, 0.8),
+    0 0 30px rgba(255, 255, 255, 0.25);
+
+  animation-delay: 1.2s;
+}
+
+/* =========================================================
+   ORBIT NODES
+   ========================================================= */
+
+.nexora-orbit-node {
+  position: absolute;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid rgba(139, 92, 246, 0.18);
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(139, 92, 246, 0.12),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  color: rgba(196, 181, 253, 0.75);
+
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.3),
+    inset 0 0 20px rgba(139, 92, 246, 0.04);
+
+  animation:
+    nexora-node-counter
+    18s
+    linear
+    infinite;
+}
+
+.nexora-orbit-node::after {
+  content: "";
+
+  position: absolute;
+  inset: -5px;
+
+  border-radius: inherit;
+
+  border: 1px solid rgba(139, 92, 246, 0.06);
+
+  opacity: 0.5;
+}
+
+/* Node positions */
+
+.nexora-orbit-node-1 {
+  left: 10%;
+  top: 48%;
+}
+
+.nexora-orbit-node-2 {
+  right: 8%;
+  top: 32%;
+}
+
+.nexora-orbit-node-3 {
+  left: 28%;
+  bottom: 3%;
+}
+
+.nexora-orbit-node-4 {
+  right: 30%;
+  top: 2%;
+}
+
+/* =========================================================
+   ENERGY RINGS
+   ========================================================= */
+
+.nexora-energy-ring {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  transform-origin: center;
+}
+
+.nexora-energy-ring-1 {
+  width: 92%;
+  height: 44%;
+
+  border-top:
+    1px solid rgba(139, 92, 246, 0.22);
+
+  border-bottom:
+    1px solid rgba(34, 211, 238, 0.08);
+
+  animation:
+    nexora-energy-spin
+    16s
+    linear
+    infinite;
+}
+
+.nexora-energy-ring-2 {
+  width: 66%;
+  height: 76%;
+
+  border-left:
+    1px solid rgba(34, 211, 238, 0.1);
+
+  border-right:
+    1px solid rgba(139, 92, 246, 0.14);
+
+  animation:
+    nexora-energy-spin-reverse
+    22s
+    linear
+    infinite;
+}
+
+/* =========================================================
    STAGGER HELPERS
-   ======================================== */
+   ========================================================= */
 
 .nexora-delay-1 {
   animation-delay: 100ms;
@@ -463,9 +819,9 @@ body {
   animation-delay: 600ms;
 }
 
-/* ========================================
+/* =========================================================
    INTERACTION HELPERS
-   ======================================== */
+   ========================================================= */
 
 .nexora-interactive {
   transition:
@@ -476,8 +832,6 @@ body {
     box-shadow 300ms ease,
     color 300ms ease;
 }
-
-/* Premium hover lift */
 
 .nexora-hover-lift {
   transition:
@@ -490,29 +844,21 @@ body {
   transform: translateY(-6px);
 }
 
-/* ========================================
+/* =========================================================
    PREMIUM FOCUS
-   ======================================== */
+   ========================================================= */
 
 .nexora-focus:focus-visible {
   outline: none;
+
   box-shadow:
     0 0 0 2px rgba(139, 92, 246, 0.25),
     0 0 25px rgba(139, 92, 246, 0.08);
 }
 
-/* ========================================
+/* =========================================================
    TOUCH / INTERACTION
-   ======================================== */
-
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
-}
-
-button {
-  cursor: pointer;
-}
+   ========================================================= */
 
 .nexora-no-select {
   user-select: none;
@@ -522,9 +868,21 @@ button {
   user-select: text;
 }
 
-/* ========================================
+/* =========================================================
+   MOBILE OPTIMIZATION
+   ========================================================= */
+
+@media (max-width: 1023px) {
+  .nexora-orbit,
+  .nexora-energy-ring,
+  .nexora-orbit-node {
+    display: none;
+  }
+}
+
+/* =========================================================
    REDUCED MOTION
-   ======================================== */
+   ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -537,5 +895,75 @@ button {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  } 
+}
+
+/* =========================================================
+   20. NEXORA ANIMATED TOOLTIP SYSTEM (DOWNWARD POSITIONED)
+   ========================================================= */
+
+@keyframes nexora-tooltip-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50%, -6px, 0) scale(0.92);
+    filter: blur(4px);
   }
+  100% {
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0) scale(1);
+    filter: blur(0);
+  }
+}
+
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translate3d(-50%, -6px, 0) scale(0.92);
+  padding: 5px 11px;
+  border-radius: 8px;
+  background: rgba(16, 18, 26, 0.92);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  color: #f8fafc;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  backdrop-filter: blur(12px);
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.5),
+    0 0 15px rgba(139, 92, 246, 0.2);
+  z-index: 100;
+  transition: opacity 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-tooltip]::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 6px 6px 6px;
+  border-style: solid;
+  border-color: transparent transparent rgba(139, 92, 246, 0.4) transparent;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 100;
+  transition: opacity 0.2s ease;
+}
+
+[data-tooltip]:hover::before {
+  opacity: 1;
+  animation: nexora-tooltip-in 0.25s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
 }
